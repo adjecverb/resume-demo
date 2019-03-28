@@ -1,0 +1,343 @@
+body{
+    margin: 0;
+/*    display: flex;
+    justify-content: center;*/
+    /*height:100%;*/
+    min-height:500px;
+}
+
+html{
+    margin:0;
+    padding: 0;
+    border:0;
+    box-sizing:border-box;
+    font-size: 3vh;
+    height: 100%;
+}
+
+.header{
+    background: url(../img/bg.png) #188eee repeat;
+    color: white;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /*height: 100%;*/
+    /*float: left;*/
+}
+
+.header-content{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*或者用position:absolute;使元素脱离文档流,此时100%即是视口高度
+    position: absolute;*/
+}
+
+.portrait,.intro,.edu{
+    margin: 4vh 0;
+    /*flex: 1;*/
+}
+
+.header p{
+    font-size: 0.6rem;
+}
+
+.portrait{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 50%;
+    border: #5db0f3 0.5vh solid;
+    width: 5rem;
+    height: 5rem;
+    box-shadow: 0 0 0 0;
+    transition: all 0.5s;
+}
+
+.portrait:hover{
+    /*box-shadow: 0 0 0 5px rgba(93,176,243,0.6);*/
+    box-shadow: 0 0 0 1vh #5db0f3;
+}
+
+.portrait-img{
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.info{
+    text-align:left;
+    width: auto;
+    display:inline-block;
+}
+
+.mail::before,.tel::before,.github::before{
+    content: "";
+    width: 3vh;
+    height: 3vh;
+    font-size: 0.7rem;
+    color: #fff;
+    border-radius: 50%;
+    border: 0.5px solid #fff;
+    position: absolute;
+    transform: translate(-150%, 0);
+    line-height: 0.6;
+    box-sizing: border-box;
+}
+
+.mail::before{
+    background: url(../img/mail2.png) no-repeat center;
+    background-size: 2vh 2vh;
+}
+
+.tel::before{
+    background: url(../img/phone.png) no-repeat center;
+    background-size: 2vh 2vh;
+}
+
+.github::before{
+    background: url(../img/github.png) no-repeat center;
+    background-size: 2vh 2vh;
+}
+
+.edu{
+    text-align:left;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-rows:50% 50%;
+    grid-template-columns:50% 55%;
+    font-size: 0.4rem;
+    border: #0e6ab8 1px solid;
+    border-radius: 1vh;
+    padding: 0.2rem;
+    box-shadow: 0 0 0 1px #5db0f3;
+}
+
+.edu-item{
+    padding: 0.2rem;
+}
+
+
+/*右边*/
+
+
+.main{
+    align-items:center;
+    min-height: 500px;
+    height: auto !important;
+    display: flex;
+    /*height:100%;*/
+    background-color: #f5f5f5;
+}
+
+.sec-header{
+    text-align: center;
+    color: #188eee;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 25%;
+}
+.sec-header .header-txt {
+    width: 100%;
+}
+
+.header-txt::before, .header-txt::after {
+      content: '';
+      display: inline-block;
+      border-top: 1px solid #ccc;
+      vertical-align:middle;
+      /*width: 19vw;*/
+      /*margin: 1vh;*/
+}
+
+.skill-item,.experience-item{
+    margin: 2rem 1rem 1rem 0;
+}
+
+.experience{
+    height: 30%;
+    position:relative;
+}
+.experience, .sec-content{
+    margin-left: 2vw;
+}
+
+.experience-content{
+    margin-top: 0;
+    margin-left: 15px;
+}
+
+.experience::before{
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(#cccccc 60%, #cccccc 60%, transparent);
+    transform: translateX(400%);
+}
+
+.item-header{
+    color:black;
+    font-size: 15px;
+    margin-top: 0;
+    position: relative;
+    top:-4px;
+}
+.div-spot{
+    float: left;
+    width:0.4rem;
+    margin-right: 10px;
+}
+.spot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #188eee;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    z-index: 999;
+    box-shadow: 0 0 0 2px #c9e0f4;
+    transition:all 0.5s;
+}
+
+.experience-item:hover .spot{
+    box-shadow: 0 0 0 4px #c9e0f4;
+}
+
+.item-detail{
+    color: #999999;
+    font-size: 10px;
+    padding-left: 4px;
+}
+
+.sk-header::after{
+    content: "了解";
+    border-radius: 1vh;
+    border: 0.5px rgba(99,99,99,0.4) solid;
+    font-size: 0.4rem;
+    padding: 0 0.5rem;
+    color: #999999;
+    float: right;
+}
+
+.item-background{
+    border-radius: 1vh;
+    background: #cccccc;
+}
+
+.ps{
+    width: 20%;
+    border-radius: 1vh;
+    padding-top:0.5vh;
+    background: linear-gradient(to right,#117ad4,#10afed);
+}
+
+.hc{
+    width: 85%;
+    border-radius: 1vh;
+    padding-top:0.5vh;
+    background: linear-gradient(to right,#117ad4,#10afed);
+}
+
+.js{
+    width: 50%;
+    border-radius: 1vh;
+    padding-top:0.5vh;
+    background: linear-gradient(to right,#117ad4,#10afed);
+}
+.ps-item:hover .ps{
+    animation: progress 1s linear;
+    animation-fill-mode: forwards;
+}
+.hc-item:hover .hc{
+    animation: progress 1s linear;
+    animation-fill-mode: forwards;
+}
+.js-item:hover .js{
+    animation: progress 1s linear;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes progress{
+    0%{
+        width:0;}
+}
+
+@media screen and (max-width: 767px) {
+    body{
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .section{
+        margin-top: 1rem;
+    }
+    .header,.main {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        /*padding: 1rem;*/
+        height:100%;    
+    }
+    .sec-header .header-txt {
+        font-size: 1rem;
+    }
+    .ex-header,.sk-header{
+        font-size: 13px;
+    }
+    .header-txt::before, .header-txt::after{
+        width:33vw;
+    }
+    .experience, .sec-content{
+        padding: 0 8vw;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .header,.main {
+        width: 50%;
+    }
+    .sec-header .header-txt {
+        font-size: 23px;
+    }
+    .header-txt::before, .header-txt::after{
+        width:19vw;
+    }
+    body{
+        display:flex; 
+    }
+    .header{
+        flex:1;
+    }
+    .main{
+        flex:1;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1100px) {
+    .header,.main {
+        width: 50%;
+    }
+    .sec-header .header-txt {
+        font-size: 20px;
+    }
+    .header-txt::before, .header-txt::after{
+        width:17vw;
+    }
+    body{
+        display:flex; 
+    }
+    .header{
+        flex:1;
+    }
+    .main{
+        flex:1;
+    }
+}
